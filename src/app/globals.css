@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #2c3e50; /* Основной цвет */
+  --secondary-color: #ecf0f1; /* Вторичный цвет */
+  --accent-color: #e74c3c; /* Акцентный цвет */
+  --text-color: #34495e; /* Цвет текста */
+}
+
+/* Общий стиль */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
