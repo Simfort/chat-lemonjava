@@ -1,17 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
 :root {
-  --primary-color: #2c3e50; /* Основной цвет */
-  --secondary-color: #ecf0f1; /* Вторичный цвет */
-  --accent-color: #e74c3c; /* Акцентный цвет */
-  --text-color: #34495e; /* Цвет текста */
+  --primary-color: #0f1138;
+  --secondary-color: #040516;
+  --accent-color: #040516;
+  --bg-color: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
 }
 
+@theme inline {
+  --primary: var(--primary-color);
+  --second: var(--secondary-color);
+  --accent: var(--accent-color);
+  --text: var(--text-color);
+}
 /* Общий стиль */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Arial", sans-serif;
-  background: var(--primary-color);
-  color: var(--secondary-color);
+  font-family: "SUSE Mono", sans-serif;
+  font-optical-sizing: auto;
+  background: var(--bg-color);
+  background-size: cover;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 25px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 15px;
+}
+h6 {
+  font-size: 10px;
 }
