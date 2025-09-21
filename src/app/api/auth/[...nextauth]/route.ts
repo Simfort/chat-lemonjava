@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import NextAuth from "next-auth/next";
 import VK from "next-auth/providers/vk";
+import { NextRequest, NextResponse } from "next/server";
 
 export const authOptions = {
   providers: [
@@ -12,7 +13,11 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET!,
 };
 
-const handler = (req: NextApiRequest, res: NextApiResponse) =>
-  NextAuth(req, res, authOptions);
+const handler = (req: NextRequest, res: NextResponse) =>
+  NextAuth(
+    req as unknown as NextApiRequest,
+    res as unknown as NextApiResponse,
+    authOptions
+  );
 
 export { handler as GET, handler as POST };
