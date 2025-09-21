@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 import russia from "../../../../public/svg/flag-ru-svgrepo-com.svg";
 import belasrus from "../../../../public/svg/flag-for-flag-belarus-svgrepo-com.svg";
+import { signIn } from "next-auth/react";
 
 export default function LogIn() {
   const [openTel, setOpenTel] = useState(false);
@@ -100,6 +101,9 @@ export default function LogIn() {
       </motion.p>
       <button className="bg-(--primary) h-[50px] rounded-[10px] mt-auto cursor-pointer hover:opacity-70 transition-opacity duration-150">
         Send
+      </button>
+      <button type="button" onClick={() => signIn("vk")}>
+        VK
       </button>
     </form>
   );

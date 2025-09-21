@@ -1,8 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
 import LogIn from "./LogIn";
-
-const textArr = "Lemonjava".split("");
 
 export default function AuthContainer() {
   return (
